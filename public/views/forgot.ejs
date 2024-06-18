@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <!-- <link rel="stylesheet" href="/public/views/style.css"> -->
+    <style>
+      *,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ffffff;
+   
+}
+.sub-cont p {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 3; /* Adjust the z-index as needed */
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.tip {
+    font-size: 20px;
+    margin: 40px auto 50px;
+    text-align: center;
+}
+
+.cont {
+    margin: 30px  245px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 550px;
+    background: #fff;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
+}
+
+.form {
+    position: relative;
+    width: 640px;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    padding: 50px 30px 0;
+}
+
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+}
+
+
+
+.img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFBF00;
+}
+
+
+.img__text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img__text h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.img__text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.img__btn {
+    z-index: 2;
+    position: relative;
+    width: 130px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+ 
+}
+
+.img__btn:after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+h2 {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 260px;
+    margin: 25px auto 0;
+    text-align: left;
+}
+
+label span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+    
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+
+.submit {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #FFBF00;
+    text-transform: uppercase;
+}
+
+.fb-btn {
+    border: 2px solid #d3dae9;
+    color: #8fa1c7;
+}
+
+.fb-btn span {
+    font-weight: bold;
+    color: #455a81;
+}
+.sign-in {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+p{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="cont">
+        <div class="form forgot-password">
+            <h2>Forgot Password</h2>
+            <br>
+            <p>Enter your email to reset your password.</p>
+           
+                <div id="message"></div>
+                <form id="forgotPasswordForm">
+                    
+                    <label>
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" required> 
+                    </label>
+                   
+<button type="submit"  class="submit" onclick="forgotpassword()">Reset Password</button> 
+                </form>
+            </div>
+            <div class="sub-cont">
+                <div class="img">
+                    <div class="img__text m--forgot">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/calender-app-404121.appspot.com/o/eat.png?alt=media&token=e6d873d4-fc74-413f-b25c-8e14147f37aa" height="100%" width="100%">  
+                        <h3>To create your new password<h3>
+                    </div>
+
+            <div class="img__btn">    
+        <button type="submit" class="m--forgot">New Password</button>
+            </div>
+</div>
+<script>
+  async  function forgotpassword(){
+    event.preventDefault();
+    console.log("hit");
+        const email = document.getElementById("email").value;
+              
+                  // Prepare the data to send to the login API
+                  const userData = {
+                    email: email,
+                  };
+              
+                  try {
+                    const response = await fetch("https://eat-safely-theta.vercel.app/users/forgetPassword", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify(userData),
+                    });
+              
+                    if (response.ok) {
+                      // Login successful, handle the response as needed
+                      const data = await response.json();
+                      console.log(data);
+                      
+                    } else {
+                      // Handle login error
+                      const errorData = await response.json();
+                      console.error(errorData);
+                     
+                    }
+                  } catch (error) {
+                    console.error(error);
+                  }
+    }
+</script>
+</body>
+</html>
